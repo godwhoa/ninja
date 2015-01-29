@@ -17,6 +17,7 @@ const domain = "http://104.131.80.165:8080/u/"
 func GetVal(w http.ResponseWriter, r *http.Request) {
 	url := r.FormValue("urlInput")
 	var alias = r.FormValue("alias")
+	//If file ie alias already exist then pick a random one.
 	if Exist(alias) {
 		alias = randSeq()
 		err := ioutil.WriteFile("urls/"+alias, []byte(url), 0644)

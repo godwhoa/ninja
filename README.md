@@ -1,10 +1,10 @@
 Ninja: A url shortener
 ======================
-Edit line 13
-Alias=filename
+Edit line 13<br/>
+Alias=filename<br/>
 Long url = filebody
 
-/u/{alias}
+/u/{alias}<br/>
 redirect(readfile({alias}))
 
 
